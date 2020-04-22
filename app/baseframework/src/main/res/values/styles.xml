@@ -1,0 +1,12 @@
+<resources>
+    <style name="LoadingDialog" parent="Theme.AppCompat.DayNight">
+        <item name="android:windowFrame">@null</item>       <!-- Dialog 的 windowFrame 框為無 -->
+        <!--<item name="android:windowBackground">​​@drawable/bg_toast</item> 設置 dialog 的背景-->
+        <item name="android:windowNoTitle">true</item> <!-- 是否顯示title -->
+        <item name="android:windowIsTranslucent">false</item> <!-- 是否半透明 -->
+        <item name="android:windowIsFloating">true</item> <!-- 是否浮現在 activity 之上 -->
+        <item name="android:windowContentOverlay">@null
+        </item><!-- 也是個 drawable，定義 content overlay 的背景-->
+        <item name="android:backgroundDimEnabled">false</item> <!-- 背景是否模糊顯示 -->
+    </style>
+</resources>

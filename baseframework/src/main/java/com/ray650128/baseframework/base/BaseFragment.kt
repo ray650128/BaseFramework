@@ -27,8 +27,6 @@ abstract class BaseFragment : RxLifeCycleFragment(), BaseView {
     private var mConvertView: View? = null
     private var mProgressDialog: Dialog? = null
 
-    private var toast: Toast? = null
-
     // 防止瘋狂連點
     private var lastClickTime: Long = 0
 
@@ -52,11 +50,18 @@ abstract class BaseFragment : RxLifeCycleFragment(), BaseView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        initData()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         mConvertView = inflater.inflate(layoutID, container, false)
         return mConvertView
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        initWidget(mConvertView!!)
     }
 
     override fun startProgressDialog() {
@@ -124,4 +129,8 @@ abstract class BaseFragment : RxLifeCycleFragment(), BaseView {
             mProgressDialog = null
         }
     }
+
+    protected abstract fun initData()
+
+    protected abstract fun initWidget(rootView: View)
 }

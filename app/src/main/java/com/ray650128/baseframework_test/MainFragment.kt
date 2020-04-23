@@ -1,6 +1,7 @@
 package com.ray650128.baseframework_test
 
 import android.os.Bundle
+import android.view.View
 import com.ray650128.baseframework.base.BaseFragment
 import com.ray650128.baseframework.loadUrl
 import com.ray650128.baseframework.utility.RxUtils
@@ -15,13 +16,9 @@ class MainFragment : BaseFragment() {
 
     override val layoutID: Int = R.layout.fragment_main
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    override fun initData() {}
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
+    override fun initWidget(rootView: View) {
         btnLoadImage.setOnClickListener {
             imageView.loadUrl("Your Image Url")
         }
@@ -29,6 +26,10 @@ class MainFragment : BaseFragment() {
         btnCallApi.setOnClickListener {
             getWeather()
         }
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
     }
 
     // RxJava + Retrofit 串接 Web API

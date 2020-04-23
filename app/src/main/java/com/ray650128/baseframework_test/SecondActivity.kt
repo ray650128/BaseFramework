@@ -8,8 +8,7 @@ class SecondActivity : BaseActivity() {
 
     override val layoutId: Int = R.layout.activity_second
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun initData(savedInstanceState: Bundle?) {
 
         if(intent != null) {
             val bundle = intent.extras
@@ -17,4 +16,6 @@ class SecondActivity : BaseActivity() {
             textView.text = bundle?.getString("INPUT_TEXT")
         }
     }
+
+    override fun initWidget(savedInstanceState: Bundle?) {}
 }

@@ -24,8 +24,9 @@ class MainActivity : BaseActivity() {
         )
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun initData(savedInstanceState: Bundle?) {}
+
+    override fun initWidget(savedInstanceState: Bundle?) {
 
         btnShowProgress.setOnClickListener {
             startProgressDialog()

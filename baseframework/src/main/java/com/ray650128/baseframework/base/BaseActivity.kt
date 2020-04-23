@@ -16,8 +16,6 @@ abstract class BaseActivity : RxLifeCycleActivity(), BaseView {
     private var mContext: Context? = null
     private var mProgressDialog: Dialog? = null
 
-    private var toast: Toast? = null
-
     // 防止瘋狂連點
     private var lastClickTime: Long = 0
 
@@ -36,6 +34,9 @@ abstract class BaseActivity : RxLifeCycleActivity(), BaseView {
         super.onCreate(savedInstanceState)
         setContentView(layoutId)
         mContext = this
+
+        initData(savedInstanceState)
+        initWidget(savedInstanceState)
     }
 
     override fun attachBaseContext(newBase: Context?) {
@@ -108,7 +109,7 @@ abstract class BaseActivity : RxLifeCycleActivity(), BaseView {
         }
     }
 
-    companion object {
-        const val EXTRA_DATA = "EXTRA_DATA"
-    }
+    protected abstract fun initData(savedInstanceState: Bundle?)
+
+    protected abstract fun initWidget(savedInstanceState: Bundle?)
 }

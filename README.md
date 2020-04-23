@@ -41,8 +41,7 @@ implementation 'com.github.ray650128:BaseFramework:v1.0.0'
 <a name="Use"></a>
 ## 如何使用
 
-### 第一部分：將 Activity 及 Fragment 都繼承自框架中的 BaseActivity 和 BaseFragement
-#### 1.Activity 部分
+### 1.Activity 部分
 
 ```kotlin
 class MainActivity : BaseActivity() {
@@ -56,7 +55,7 @@ class MainActivity : BaseActivity() {
     override fun initWidget() {}
 }
 ```
-#### 2.Fragment 部分
+### 2.Fragment 部分
 ```kotlin
 /*R.layout.activity_main替換為你的layout id*/
 class MainFragment : BaseFragement() {
@@ -75,9 +74,9 @@ class MainFragment : BaseFragement() {
 ### 常用函數
 #### 頁面的切換
 ```kotlin
-//普通切換
+// 普通切換
 startActivity<跳轉的Activity名稱>()
-//自定義轉場動畫
+// 帶參數切換（透過 Bundle）
 startActivity<跳轉的Activity名稱>("參數A_Key" to "參數A_Value", "參數B_Key" to "參數B_Value" ...)
 ```
 #### 顯示載入中 Dialog

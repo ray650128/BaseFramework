@@ -17,15 +17,12 @@ v1.0.0 - 第一次發布
 
 ## 目錄
 * [如何導入到專案](#Import)
-* [快速使用](#Use)
-* [所有對外暴露方法](#All)
+* [如何使用](#Use)
+* [提供的方法或工具類別](#All)
 * [關於我](#About)
 
 <a name="Import"></a>
-## 如何導入到項目
-> 支持 jcenter。 <br/>
-
-### jcenter 導入方式
+### 如何導入到專案
 在app專案包的 build.gradle 中添加
 ```kotlin
 allprojects {
@@ -75,7 +72,7 @@ class MainFragment : BaseFragement() {
 
 
 ```
-### 第二步:在任何地方進行使用
+### 常用函數
 #### 頁面的切換
 ```kotlin
 //普通切換

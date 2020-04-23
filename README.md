@@ -15,15 +15,20 @@ Changelog
 
 v1.0.0 - 第一次發布
 
+***
+<a name="Index"></a>
 ## 目錄
-* [如何導入到專案](#Import)
+
+* [如何導入](#Import)
 * [如何使用](#Use)
 * [提供的方法或工具類別](#All)
 * [關於我](#About)
 
+***
+
 <a name="Import"></a>
-### 如何導入到專案
-在app專案包的 build.gradle 中添加
+### 如何導入
+在 project 層級的 build.gradle 中加入
 ```kotlin
 allprojects {
 		repositories {
@@ -33,15 +38,18 @@ allprojects {
 	}
 ```
 
-在需要用到這個庫的 module 中的 build.gradle 中的 dependencies 中加入
+在 app 層級的 build.gradle 中加入依賴
 ```kotlin
 dependencies {
 implementation 'com.github.ray650128:BaseFramework:v1.0.0'
 ```
+[Top](#Index)
+***
+
 <a name="Use"></a>
 ## 如何使用
 
-### 1.Activity 部分
+### Activity 部分
 
 ```kotlin
 class MainActivity : BaseActivity() {
@@ -55,7 +63,9 @@ class MainActivity : BaseActivity() {
     override fun initWidget() {}
 }
 ```
-### 2.Fragment 部分
+
+### Fragment 部分
+
 ```kotlin
 /*R.layout.activity_main替換為你的layout id*/
 class MainFragment : BaseFragement() {
@@ -68,15 +78,14 @@ class MainFragment : BaseFragement() {
     // 初始化 UI 元件
     override fun initWidget() {}
 }
-
-
 ```
+
 ### 常用函數
-#### 頁面的切換
+#### 頁面跳轉
 ```kotlin
-// 普通切換
+// 普通跳轉
 startActivity<跳轉的Activity名稱>()
-// 帶參數切換（透過 Bundle）
+// 帶參數跳轉（透過 Bundle）
 startActivity<跳轉的Activity名稱>("參數A_Key" to "參數A_Value", "參數B_Key" to "參數B_Value" ...)
 ```
 #### 顯示載入中 Dialog
@@ -98,11 +107,16 @@ showToast("文字")
 // 顯示置中的 Toast
 showToastCenter("文字")
 ```
+[Top](#Index)
+***
+
 <a name="All"></a>
 ### 提供的方法或工具類別
 ```kotlin
 coming soon...
 ```
+[Top](#Index)
+***
 
 <a name="About"></a>
 ### 關於我
@@ -110,3 +124,6 @@ Raymond Yang
 Android App developer
 
 *gmail:ray650128@gmail.com
+
+[Top](#Index)
+***

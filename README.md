@@ -14,6 +14,7 @@
 Changelog
 
 v1.0.0 - 第一次發布
+v1.0.1 - 修正小 bug
 
 ***
 <a name="Index"></a>

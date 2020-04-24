@@ -6,10 +6,20 @@ import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
 
+/**
+ * @Description: Photo/Video File 工具類別
+ * @author: Raymond Yang
+ * @date: 2018-7-21
+ */
 @SuppressLint("SimpleDateFormat")
 class FileUtils(context: Context) {
     private val rootFolderPath = context.getExternalFilesDir("tmp")!!.path
 
+    /**
+     * 建立載入中Dialog
+     * @param isCrop
+     * @return
+     */
     fun createImageFile(isCrop: Boolean = false): File? {
         return try {
             val rootFile = File(rootFolderPath)
@@ -24,6 +34,10 @@ class FileUtils(context: Context) {
         }
     }
 
+    /**
+     * 建立 Photo File
+     * @return
+     */
     fun createCameraFile(): File? {
         return try {
             val rootFile = File(rootFolderPath + File.separator + "camera1")
@@ -39,6 +53,10 @@ class FileUtils(context: Context) {
         }
     }
 
+    /**
+     * 建立 Video File
+     * @return
+     */
     fun createVideoFile(): File? {
         return try {
             val rootFile = File(rootFolderPath + File.separator + "video")

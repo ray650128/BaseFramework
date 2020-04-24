@@ -8,7 +8,10 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.ray650128.baseframework.R
 
-
+/**
+ * Created by ray650128 on 2019/7/24.
+ * Dialog 工具
+ */
 object DialogUtils {
 
     /**

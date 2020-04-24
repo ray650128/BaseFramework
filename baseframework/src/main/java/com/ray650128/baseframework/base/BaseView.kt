@@ -1,10 +1,8 @@
 package com.ray650128.baseframework.base
 
-import android.view.View
-
 /**
- * Created by ljk on 2017/6/28.
- * mvp 中 view的基類
+ * Created by Raymond Yang on 2019/10/12.
+ * view 的基本接口
  */
 interface BaseView {
     fun startProgressDialog()

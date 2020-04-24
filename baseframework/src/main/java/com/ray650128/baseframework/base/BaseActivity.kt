@@ -9,6 +9,11 @@ import com.ray650128.baseframework.utility.DialogUtils
 import com.ray650128.baseframework.utility.DisplayUtils
 import com.ray650128.baseframework.utility.ToastUtils
 
+/**
+ * @Description: Activity 基本類別
+ * @author: Raymond Yang
+ * @date: 2019-10-12
+ */
 abstract class BaseActivity : RxLifeCycleActivity(), BaseView {
 
     abstract val layoutId: Int

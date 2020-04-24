@@ -13,8 +13,8 @@ import com.ray650128.baseframework.utility.DialogUtils
 import com.ray650128.baseframework.utility.ToastUtils
 
 /**
- * @Description: Fragment基类
- * @author: steven
+ * @Description: Fragment 基本類別
+ * @author: Raymond Yang
  * @date: 2019-10-17
  */
 abstract class BaseFragment : RxLifeCycleFragment(), BaseView {

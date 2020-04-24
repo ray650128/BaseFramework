@@ -11,6 +11,11 @@ import com.trello.rxlifecycle2.android.RxLifecycleAndroid
 import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 
+/**
+ * @Description: RxLifeCycleActivity 類別
+ * @author: Raymond Yang
+ * @date: 2019-10-12
+ */
 open class RxLifeCycleActivity : AppCompatActivity(), LifecycleProvider<ActivityEvent> {
     private val lifecycleSubject =
         BehaviorSubject.create<ActivityEvent>()

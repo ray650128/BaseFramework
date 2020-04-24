@@ -1,6 +1,6 @@
 package com.ray650128.baseframework.base
 
-import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -12,6 +12,11 @@ import com.trello.rxlifecycle2.android.RxLifecycleAndroid
 import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 
+/**
+ * @Description: RxLifeCycleFragment 類別
+ * @author: Raymond Yang
+ * @date: 2019-10-17
+ */
 open class RxLifeCycleFragment : Fragment(),
     LifecycleProvider<FragmentEvent> {
     private val lifecycleSubject =
@@ -29,8 +34,8 @@ open class RxLifeCycleFragment : Fragment(),
         return RxLifecycleAndroid.bindFragment(lifecycleSubject)
     }
 
-    override fun onAttach(activity: Activity) {
-        super.onAttach(activity)
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
         lifecycleSubject.onNext(FragmentEvent.ATTACH)
     }
 

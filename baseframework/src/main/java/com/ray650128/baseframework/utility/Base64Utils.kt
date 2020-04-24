@@ -6,14 +6,13 @@ import android.util.Base64
 import java.io.ByteArrayOutputStream
 import java.io.IOException
 
-
 /**
  * Created by ray650128 on 2018/7/24.
- *
+ * Base 64 轉換工具
  */
 object Base64Utils {
     /**
-     * bitmap轉為base64
+     * bitmap 轉為 base64
      * @param bitmap
      * @return
      */

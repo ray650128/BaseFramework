@@ -1,6 +1,7 @@
 package com.ray650128.baseframework_test.net
 
 import com.ray650128.baseframework_test.BuildConfig
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -16,7 +17,6 @@ open class ApiClient {
         private const val API_BASE_URL = "https://opendata.cwb.gov.tw/"
         private const val TIME_OUT = 10L
 
-
         // 雙重檢測機制
         @JvmStatic
         fun getRetrofit(): Retrofit {
@@ -25,6 +25,11 @@ open class ApiClient {
                     if (retrofit == null) {    // 雙重檢測機制
                         val builder = OkHttpClient().newBuilder()
                         // 透過攔截器加入 Header 參數
+                        /* gradle 需加入：
+                           kotlinOptions {
+                               jvmTarget = JavaVersion.VERSION_1_8
+                           }
+                        */
                         //builder.addInterceptor(Interceptor { chain: Interceptor.Chain ->
                         //    val request = chain.request()
                         //            .newBuilder()
